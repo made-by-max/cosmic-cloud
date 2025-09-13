@@ -37,3 +37,17 @@
     --copylighter: light-dark(var(--neutral500), var(--neutral400));
 
 }
+
+.post-tags {
+    display: inline;
+  
+}
+
+.post-tags a {
+    color: var(--content);
+    text-decoration: none;
+    font-size: .75rem;
+    padding: .25rem;
+    border: 1px solid var(--secondary);
+    border-radius: 2px;
+}

@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PostLayout from "../../layouts/PostLayout.astro";
 import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
@@ -24,7 +23,20 @@ const pageTitle = post.data.title;
 <BaseLayout pageTitle={pageTitle}>
   <div class="post">
     <h1 class="post-title">{post.data.title}</h1>
+    <p class="post-description">{post.data.description}</p>
     <p class="post-date">{post.data.date}</p>
+    <div>
+      {
+        post.data.tags.map((tag) => (
+          <p class="post-tags">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))
+      }
+    </div>
     <Content />
   </div>
 </BaseLayout>
+
+title: z.string(), description: z.string().max(200), date: z.string().date(),
+tags: z.array(z.string()),
