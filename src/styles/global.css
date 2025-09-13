@@ -1,0 +1,39 @@
+:root {
+    font-family: sans-serif;
+    
+    --green500: #31d860;
+    --green200:#5ce081;
+    --green700: #22f44f;
+    --green900: #020804;
+    --cyan200: #5ce0d9;
+    --cyand500: #31d8cf;
+    --cyan700: #22b4ac;
+    --cyan900: #020808;
+
+    --neutral50:#fbfbfb;
+    --neutral100:#eff1ef;
+    --neutral200: #dde2de;
+    --neutral300: #d6dcd7;
+    --neutral400: #9faca3;
+    --neutral500: #849588;
+    --neutral600:#5e6e63;
+    --neutral700: #3b453e;
+    --neutral800:#232925;
+    --neutral900: #181b19;
+
+    --primary: var(--green500);
+    --primarylight:var(--green200);
+    --primarydark:var(--green700);
+    --secondary:var(--cyand500);
+    --secondarylight:var(--cyan200);
+    --secondarydark:var(--cyan700);
+
+    color-scheme: light dark;
+    --bg: light-dark(var(--neutral100), var(--neutral900));
+    --fg: light-dark(var(--neutral50), var(--neutral800));
+    --border: light-dark(var(--neutral200), var(--neutral700));
+    --copy: light-dark(var(--neutral800), var(--neutral50));
+    --copylight: light-dark(var(--neutral600), var(--neutral300));
+    --copylighter: light-dark(var(--neutral500), var(--neutral400));
+
+}

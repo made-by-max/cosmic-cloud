@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import BlogCard from "../components/BlogCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const posts = await getCollection("writing");
+posts.sort((a, b) => {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const heading = "Writing";
+const pageTitle = "Writing";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1>{heading}</h1>
+  {posts.map((post) => <BlogCard post={post} />)}
+</BaseLayout>
