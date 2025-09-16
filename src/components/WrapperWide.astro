@@ -1,0 +1,17 @@
+<div class="wrapper-wide">
+  <slot />
+</div>
+
+<style>
+  .wrapper-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+
+    @media screen and (max-width: 1000px) {
+      & {
+        padding: 0 24px;
+      }
+    }
+  }
+</style>

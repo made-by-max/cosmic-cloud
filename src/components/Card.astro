@@ -1,0 +1,10 @@
+---
+const { cardLink, cardTitle, cardContent } = Astro.props;
+---
+
+<div class="card">
+  <a class="Card-Primary-Action" href="/cat/lilith"
+    ><h2 class="card-title">{cardTitle}</h2></a
+  >
+  <p class="card-content">{cardContent}</p>
+</div>

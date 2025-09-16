@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import CardContainer from "../components/CardContainer.astro";
 const pageTitle = "Max Taylor";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <Hero />
+  <CardContainer />
 </BaseLayout>

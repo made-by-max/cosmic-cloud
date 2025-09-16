@@ -9,10 +9,9 @@ const { post } = Astro.props;
 ---
 
 <div class="blog-card">
+  <p class="date">{post.data.date}</p>
   <h3><a href=`/writing/${post.id}`>{post.data.title}</a></h3>
-  <div class="metadata">
-    <p class="date">{post.data.date}</p>
-  </div>
+  <p class="description">{post.data.description}</p>
   <div>
     {
       post.data.tags.map((tag) => (
@@ -22,5 +21,4 @@ const { post } = Astro.props;
       ))
     }
   </div>
-  <p class="description">{post.data.description}</p>
 </div>

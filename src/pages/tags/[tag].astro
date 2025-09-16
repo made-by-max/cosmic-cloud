@@ -14,6 +14,7 @@ export async function getStaticPaths() {
     const filteredPosts = allPosts.filter((post) =>
       post.data.tags.includes(tag)
     );
+
     return {
       params: { tag },
       props: { posts: filteredPosts },
@@ -30,10 +31,10 @@ const { posts } = Astro.props;
   <ul>
     {
       posts.map((post) => (
-        <li>
+        <>
           <BlogCard post={post} />
           {/* {<h1 class="post-title">{post.data.title}</h1>} */}
-        </li>
+        </>
       ))
     }
   </ul>
