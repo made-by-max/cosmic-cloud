@@ -19,14 +19,8 @@ content:
         label: Description
         type: text
 
-      - name: pubDate
+      - name: date
         label: Publication Date
-        type: date
-        options:
-          format: MM/dd/yyyy
-
-      - name: updatedDate
-        label: Last Updated Date
         type: date
         options:
           format: MM/dd/yyyy
