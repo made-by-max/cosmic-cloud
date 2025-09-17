@@ -1,0 +1,12 @@
+---
+import Wrapper from "./Wrapper.astro";
+
+const { heading } = Astro.props;
+---
+
+<section>
+  <Wrapper>
+    <h2 class="section-header">{heading}</h2>
+    <slot />
+  </Wrapper>
+</section>

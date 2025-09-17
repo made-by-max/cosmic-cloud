@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import Section from "./Section.astro";
+import BlogCard from "./BlogCard.astro";
+
+const posts = await getCollection("writing");
+posts.sort((a, b) => {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const suggestedEntries = posts.slice(0, 3);
+
+const heading = "Latest posts";
+---
+
+<Section heading={heading}>
+  {suggestedEntries.map((post) => <BlogCard post={post} />)}
+</Section>
