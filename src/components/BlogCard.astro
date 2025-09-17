@@ -8,15 +8,17 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<div class="blog-card">
-  <p class="date">{post.data.date}</p>
-  <h3><a href=`/writing/${post.id}`>{post.data.title}</a></h3>
-  <p class="description">{post.data.description}</p>
+<div class="post-card">
+  <h3 class="post-title">
+    <a href=`/writing/${post.id}`>{post.data.title}</a>
+  </h3>
+  <p class="post-date">Posted on: {post.data.date}</p>
+  <p class="post-description">{post.data.description}</p>
   <div>
     {
       post.data.tags.map((tag) => (
         <p class="post-tags">
-          <a href={`/tags/${tag}`}>{tag}</a>
+          <a href={`/tags/${tag}`}>#{tag}</a>
         </p>
       ))
     }

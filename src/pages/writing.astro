@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BlogCard from "../components/BlogCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Wrapper from "../components/Wrapper.astro";
 
 const posts = await getCollection("writing");
 posts.sort((a, b) => {
@@ -10,11 +11,13 @@ posts.sort((a, b) => {
   return dateB.getTime() - dateA.getTime();
 });
 
-const heading = "Writing";
-const pageTitle = "Writing";
+const heading = "All Posts";
+const pageTitle = "All Posts";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>{heading}</h1>
-  {posts.map((post) => <BlogCard post={post} />)}
+  <Wrapper>
+    <h1>{heading}</h1>
+    {posts.map((post) => <BlogCard post={post} />)}
+  </Wrapper>
 </BaseLayout>
