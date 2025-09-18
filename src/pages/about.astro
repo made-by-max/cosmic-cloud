@@ -1,10 +1,10 @@
 ---
+import EmailLink from "../components/EmailLink.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const title = "About me";
 const pageTitle = title;
-const email = "hi@madebymax.dev";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -15,9 +15,7 @@ const email = "hi@madebymax.dev";
       technology and developer tools, working on making the leap into a more
       engineering-based role.
     </p>
-    <p class="large-text">
-      You can get in touch with me at <a href={`mailto:${email}`}>{email}.</a>
-    </p>
+
     <!-- <div>
       <img src="/images/profilepicnobg.png" class="profile" />
     </div> -->

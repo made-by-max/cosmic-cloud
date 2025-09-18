@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Oxygen+Mono&display=swap');
+
+
 :root {
     
     --mono-font: "Oxygen Mono", monospace;
@@ -46,7 +48,7 @@
 
 
     --primary: var(--indigo-5);
-    --primarylight:var(--indigo-3);
+    --primarylight:var(--indigo-2);
     --primarydark: var(--indigo-8);
     
     --secondary:var(--pink-6);
@@ -59,7 +61,7 @@
     --border: light-dark(var(--gray-2), var(--gray-9));
     --copy: light-dark(var(--gray-12), var(--gray-0));
     --copylight: light-dark(var(--gray-7), var(--gray-4));
-    --primarysubtle: light-dark(var(--indigo-3), var(--indigo-8));
+    --primarysubtle: light-dark(var(--indigo-2), var(--indigo-8));
 
     --text-xxs: .75rem;
     --text-xs: .875rem;
@@ -80,6 +82,10 @@ body {
     font-family: var(--sans-font);
     font-size: var(--text-base);
     line-height: 1.5;
+}
+
+main {
+    min-height: 100vh;
 }
 
 img {
@@ -110,6 +116,10 @@ a {
     font-size: var(--text-base);
 }
 
+a:hover {
+    color: var(--copylight);
+}
+
 .accent-text {
      background: -webkit-linear-gradient(-27deg, #303af5, #6168F7);
      background-clip: text;   
@@ -117,11 +127,17 @@ a {
         -webkit-text-fill-color: transparent;
 }
 
-/* .large-text {
-    font-size: var(--text-large);
-} */
+  #emailAddress {
+    font-size: var(--text-4xl);
+    font-family: var(--display-font);
+  }
 
-
+.footer-cta {
+    font-size: var(--text-xl);
+    font-family: var(--sans-font);
+    margin-block-end: -72px;
+    margin-block-start: 80px;
+}
 
 
 /* Post styles */

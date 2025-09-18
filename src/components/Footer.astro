@@ -1,0 +1,82 @@
+---
+import EmailLink from "./EmailLink.astro";
+---
+
+<footer>
+  <hr />
+  <div>
+    <p class="footer-cta">Like what you see? Get in touch!</p>
+    <EmailLink />
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>&copy; 2025 Max Taylor. All rights reserved.</p>
+    </div>
+    <div class="social-links">
+      <ul>
+        <li>
+          <a href="https://bsky.app/profile/madebymax.bsky.social"
+            ><i class="fa-brands fa-bluesky"></i> Bluesky</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/made-by-max"
+            ><i class="fa-brands fa-github"></i> Github</a
+          >
+        </li>
+        <li>
+          <a href="https://codepen.io/made-by-max"
+            ><i class="fa-brands fa-codepen"></i> Codepen</a
+          >
+        </li>
+        <!-- <li>
+        <a href="https://www.linkedin.com/in/madebymax/"
+          ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+        >
+      </li> -->
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-block-start: 120px;
+  }
+
+  hr {
+    height: 1px;
+    background: -webkit-linear-gradient(-27deg, #303af5, #6168f7);
+    border: none;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: 80px;
+  }
+
+  .copyright p {
+    font-size: var(--text-xs);
+    color: var(--copylight);
+    font-family: var(--mono-font);
+  }
+
+  .social-links {
+  }
+
+  .social-links ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    a {
+      margin-inline-start: 24px;
+    }
+  }
+</style>
