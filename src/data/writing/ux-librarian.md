@@ -1,13 +1,15 @@
 ---
 title: What’s a UX Librarian?
+description: What’s a UX Librarian? It’s a question I get asked a lot during
+  interviews and at meet-ups, every time I bring up my former career. It’s often
+  accompanied by a bewildered tone and a skeptical look. Surely I’m just making
+  this up?
 date: 2018-03-08
-description: What’s a UX Librarian? It’s a question I get asked a lot during interviews and at meet-ups, every time I bring up my former career. It’s often accompanied by a bewildered tone and a skeptical look. Surely I’m just making this up?
-tags: 
-- blog
-- product design
-- career
+tags:
+  - blog
+  - product design
+  - career
 ---
-
 What most people don’t realize is that library science and human computer interaction have so much in common that many colleges (Cornell, UC Berkeley, University of Michigan, University of Texas, UNC Chapel Hill, and Pratt to name just a few) offer HCI degrees or specializations through their information science departments.
 
 Still, it’s not an easy question to answer in the 30 seconds I usually have, especially since most people don’t really understand what librarians do. (Hint: the person who checks out your books at the library is probably not actually a librarian).
@@ -30,22 +32,23 @@ Since so many librarians are already applied user-centered design principles it 
 
 Some of the tasks I routinely performed as a UX Librarian include:
 
-* Improved the user experience of the library website, third party online systems, and the physical library building.
-
-* Designed and conducted ethnographic research studies, surveys, focus groups, card sorts, interviews, and other research activities to improve library services.
-
-* Presented research findings to stakeholders and worked with developers to implement solutions.
-
-* Redesigned information architecture, performed content audits, established content strategy, and established style guides.
-
-* Webmaster duties, including updating and maintaining webpages, CMS management, monitoring web analytics, and chairing web development committee (nobody loves a committee more than a librarian).
-
-* Designed and conducted usability testing.
-
-* Defined and led the UX strategy for the library.
-
-* Advocated for the value of UX to stakeholders, developers, and peers.
+*   Improved the user experience of the library website, third party online systems, and the physical library building.
+    
+*   Designed and conducted ethnographic research studies, surveys, focus groups, card sorts, interviews, and other research activities to improve library services.
+    
+*   Presented research findings to stakeholders and worked with developers to implement solutions.
+    
+*   Redesigned information architecture, performed content audits, established content strategy, and established style guides.
+    
+*   Webmaster duties, including updating and maintaining webpages, CMS management, monitoring web analytics, and chairing web development committee (nobody loves a committee more than a librarian).
+    
+*   Designed and conducted usability testing.
+    
+*   Defined and led the UX strategy for the library.
+    
+*   Advocated for the value of UX to stakeholders, developers, and peers.
+    
 
 So what’s a UX Librarian? In the simplest terms, a UX Librarian is a UX Designer who happens to work in a library. They share the same skills and responsibilities as UX Designers, but apply them in a different industry.
 
-*Originally published on [Medium](https://medium.com/@stacy.taylor/whats-a-ux-librarian-f8158f9578b9)*
+_Originally published on_ [_Medium_](https://medium.com/@stacy.taylor/whats-a-ux-librarian-f8158f9578b9)
