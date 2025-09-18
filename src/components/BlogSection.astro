@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Section from "./Section.astro";
 import BlogCard from "./BlogCard.astro";
+import SectionHeader from "./SectionHeader.astro";
 
 const posts = await getCollection("writing");
 posts.sort((a, b) => {
@@ -13,8 +14,10 @@ posts.sort((a, b) => {
 const suggestedEntries = posts.slice(0, 3);
 
 const heading = "Latest posts";
+const cta = { text: "All posts", href: "/writing" };
 ---
 
-<Section heading={heading}>
+<Section>
+  <SectionHeader heading={heading} cta={cta} />
   {suggestedEntries.map((post) => <BlogCard post={post} />)}
 </Section>

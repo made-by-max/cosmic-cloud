@@ -1,0 +1,23 @@
+---
+interface Props {
+  cta: { href: string; text: string };
+  heading: string;
+}
+
+const { cta, heading } = Astro.props;
+---
+
+<div class="section-header">
+  <h2>
+    {heading}
+  </h2>
+  <a href={cta.href}>{cta.text}</a>
+</div>
+
+<style>
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
