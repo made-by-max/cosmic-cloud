@@ -6,7 +6,7 @@ const writing = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().max(200),
-    date: z.string().date(),
+    date: z.date(),
     tags: z.array(z.string()),
   }),
 });

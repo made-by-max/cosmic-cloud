@@ -1,7 +1,7 @@
 ---
 title: Welcome! Everything is fine.
 description: What this blog is all about
-pubDate: 06/15/2024
+date: 2024-06-15
 tags:
   - html
   - css

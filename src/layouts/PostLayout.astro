@@ -6,6 +6,11 @@ import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("writing");
+  posts.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
+  });
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
@@ -26,7 +31,7 @@ const pageTitle = post.data.title;
     <div class="post">
       <h1 class="post-title">{post.data.title}</h1>
       <p class="post-description">{post.data.description}</p>
-      <p class="post-date">{post.data.date}</p>
+      <p class="post-date">{post.data.date.toLocaleDateString()}</p>
       <div>
         {
           post.data.tags.map((tag) => (

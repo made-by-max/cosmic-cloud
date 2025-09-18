@@ -1,7 +1,7 @@
 ---
 title: "CSS Architecture with Beyond CSS"
 description: "Diving into the deep end of CSS"
-date: "2024-08-19"
+date: 2024-08-19
 tags: 
 - css
 - design engineering

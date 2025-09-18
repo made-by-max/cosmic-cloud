@@ -12,7 +12,7 @@ const { post } = Astro.props;
   <h3 class="post-title">
     <a href=`/writing/${post.id}`>{post.data.title}</a>
   </h3>
-  <p class="post-date">Posted on: {post.data.date}</p>
+  <p class="post-date">Posted on: {post.data.date.toLocaleDateString()}</p>
   <p class="post-description">{post.data.description}</p>
   <div>
     {

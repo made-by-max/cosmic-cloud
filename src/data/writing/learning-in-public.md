@@ -1,7 +1,7 @@
 ---
 title: 'Learning in Public'
 description: 'Follow along on my learning journey'
-date: "2024-05-10"
+date: 2024-05-10
 tags: 
 - html
 - css
