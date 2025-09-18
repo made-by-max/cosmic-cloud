@@ -13,7 +13,7 @@ I’ve been dabbling in CSS for well over a decade at this point and have taken 
 
 ## Moving Beyond
 
-Kevin Powell’s new Beyond CSS course was exactly what I was looking for. He starts by introducing Sass (and SCSS), covering concepts like nested selectors, variables, and mixins in module one. In module two he moves on to the more advanced features of SCSS, using functions to add logic to your stylesheets. But module three is where we really start cooking with fire.
+Kevin Powell’s new [Beyond CSS course](https://www.beyondcss.dev/) was exactly what I was looking for. He starts by introducing Sass (and SCSS), covering concepts like nested selectors, variables, and mixins in module one. In module two he moves on to the more advanced features of SCSS, using functions to add logic to your stylesheets. But module three is where we really start cooking with fire.
 
 ## Building scalable systems
 
