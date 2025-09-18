@@ -1,20 +1,19 @@
 ---
-title: "CSS Architecture with Beyond CSS"
-description: "Diving into the deep end of CSS"
+title: CSS Architecture with Beyond CSS
+description: Diving into the deep end of CSS
 date: 2024-08-19
-tags: 
-- css
-- design engineering
+tags:
+  - blog
+  - css
+  - courses
 ---
-
-
 ## The gap in CSS courses
 
 I’ve been dabbling in CSS for well over a decade at this point and have taken a number of different courses from different platforms. And what I’ve found is that many of them teach the same basic concepts over and over. You’ve got your basic introduction to CSS, including how to add styles to your websites and the basics of specificity and inheritance. Then you’ve got your “responsive web design” courses that focus on flexbox and grid. But after that? I’d seen enough code to know that most devs use things like utility classes and variables, but these things never seemed to get covered in the courses I found. Enter Beyond CSS.
 
 ## Moving Beyond
 
-Kevin Powell’s new [Beyond CSS course] [https://www.beyondcss.dev/] was exactly what I was looking for. He starts by introducing Sass (and SCSS), covering concepts like nested selectors, variables, and mixins in module one. In module two he moves on to the more advanced features of SCSS, using functions to add logic to your stylesheets. But module three is where we really start cooking with fire.
+Kevin Powell’s new \[Beyond CSS course\] \[[https://www.beyondcss.dev/\]](https://www.beyondcss.dev/%5D) was exactly what I was looking for. He starts by introducing Sass (and SCSS), covering concepts like nested selectors, variables, and mixins in module one. In module two he moves on to the more advanced features of SCSS, using functions to add logic to your stylesheets. But module three is where we really start cooking with fire.
 
 ## Building scalable systems
 
