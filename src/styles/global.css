@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Oxygen+Mono&display=swap');
-
 :root {
     
     --mono-font: "Oxygen Mono", monospace;
@@ -134,13 +133,18 @@ a {
     border-radius: 8px;
   }
 
+  .post-heading {
+    margin-block-start: -20px;
+    margin-block-end: -5px;
+  }
 .post-title {
-    margin-bottom: 4px;
+    margin-block: 4px;
 }
 
 .post-date {
     margin-top: 0px;
-    font-size: var(--text-xs)
+    font-size: var(--text-xs);
+    color: var(--copylight)
 }
 
 /* .post-description {

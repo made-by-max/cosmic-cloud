@@ -30,9 +30,9 @@ const pageTitle = post.data.title;
 <BaseLayout pageTitle={pageTitle}>
   <Wrapper>
     <div class="post">
-      <h1 class="post-title">{post.data.title}</h1>
-      <p class="post-date">{post.data.date.toLocaleDateString()}</p>
-      <p class="post-description">{post.data.description}</p>
+      <!-- <p class="post-date">Posted on: {post.data.date.toLocaleDateString()}</p> -->
+      <h1 class="post-heading">{post.data.title}</h1>
+
       <div>
         {
           post.data.tags.map((tag) => (
@@ -42,6 +42,8 @@ const pageTitle = post.data.title;
           ))
         }
       </div>
+      <p class="post-description">{post.data.description}</p>
+
       <Content />
     </div>
   </Wrapper>

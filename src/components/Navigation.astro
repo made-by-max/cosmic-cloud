@@ -3,7 +3,11 @@
 ---
 
 <nav>
-  <div class="homeLink"><a href="/">Home</a></div>
+  <div>
+    <a href="/"
+      ><img src="/public/media/madebymax.svg" alt="home" class="home-logo" /></a
+    >
+  </div>
   <div class="pageLinks">
     <a href="/writing/">All Posts</a>
     <a href="/about/">About</a>
@@ -16,6 +20,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px;
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-block-end: 40px;
   }
 
   nav a {
@@ -23,5 +30,9 @@
     color: var(--copy);
     margin-inline-end: 24px;
     font-size: 1.25rem;
+  }
+
+  img {
+    height: 32px;
   }
 </style>
