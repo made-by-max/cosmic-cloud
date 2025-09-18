@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import Wrapper from "../components/Wrapper.astro";
+
 import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
@@ -30,13 +31,13 @@ const pageTitle = post.data.title;
   <Wrapper>
     <div class="post">
       <h1 class="post-title">{post.data.title}</h1>
-      <p class="post-description">{post.data.description}</p>
       <p class="post-date">{post.data.date.toLocaleDateString()}</p>
+      <p class="post-description">{post.data.description}</p>
       <div>
         {
           post.data.tags.map((tag) => (
             <p class="post-tags">
-              <a href={`/tags/${tag}`}>{tag}</a>
+              <a href={`/tags/${tag}`}>#{tag}</a>
             </p>
           ))
         }

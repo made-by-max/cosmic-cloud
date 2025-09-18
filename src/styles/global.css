@@ -83,6 +83,10 @@ body {
     line-height: 1.5;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Text Styles */
 
 h1 {
@@ -109,7 +113,8 @@ a {
 
 .accent-text {
      background: -webkit-linear-gradient(-27deg, #303af5, #6168F7);
-        -webkit-background-clip: text;
+     background-clip: text;   
+     -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 
