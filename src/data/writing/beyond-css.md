@@ -5,7 +5,7 @@ date: 2024-08-19
 tags:
   - blog
   - css
-  - courses
+  - learning
 ---
 ## The gap in CSS courses
 
