@@ -7,6 +7,7 @@ tags:
   - design engineering
   - learning
 ---
+
 ## My Coding Journey So Far
 
 I've been dabbling in frontend design for a long time now. I taught myself HTML back in the days of frames, and picked up CSS over the years. I've coded a handful of websites using HTML and CSS.
