@@ -1,20 +1,15 @@
 ---
-title: 'Learning in Public'
-description: 'Follow along on my learning journey'
+title: Learning in Public
+description: Follow along on my learning journey
 date: 2024-05-10
-tags: 
-- html
-- css
-- javascript
-- react
-- design engineering
-- learning new skills
+tags:
+  - blog
+  - design engineering
+  - learning
 ---
+## My Coding Journey So Far
 
-
-## My Coding Journey So Far 
-
-I've been dabbling in frontend design for a long time now. I taught myself HTML back in the days of frames, and picked up CSS over the years. I've coded a handful of websites using HTML and CSS. 
+I've been dabbling in frontend design for a long time now. I taught myself HTML back in the days of frames, and picked up CSS over the years. I've coded a handful of websites using HTML and CSS.
 
 I've used JavaScript a bit here and there. I did the [100 days of code challenge](https://radcode.netlify.app/) in 2020 and worked through the JavaScript lessons on [FreeCodeCamp](https://freecodecamp.org/) and some courses on [SuperHi](https://superhi.com/). But it never quite clicked for me. FreeCodeCamp was too theoretical. I understood how to use loops and arrays and different methods, but I couldn't make the connection between what I was learning and actually using JavaScript to maipulate the DOM. SuperHi's courses were a lot of fun and I did some really cool projects, but I was just coding along and never really felt like I got a solid understanding of the concepts.
 
