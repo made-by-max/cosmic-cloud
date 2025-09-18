@@ -23,7 +23,7 @@ content:
         label: Publication Date
         type: date
         options:
-          format: MM/dd/yyyy
+          format: yyyy-mm-dd
 
       - name: body
         label: Body
