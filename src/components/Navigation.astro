@@ -1,43 +1,42 @@
 ---
-
+import madebymax from "../assets/madebymax.svg"; // Correct import path
+import { Image } from "astro:assets";
 ---
 
 <nav>
   <div>
-    <a href="/"
-      ><img src="./src/assets/madebymax.svg" alt="Home" class="home-logo" /></a
-    >
+    <a href="/"> <Image src={madebymax} alt="Home" height="32" /> </a>
+    <div class="pageLinks">
+      <a href="/writing/">All Posts</a>
+      <a href="/about/">About</a>
+    </div>
   </div>
-  <div class="pageLinks">
-    <a href="/writing/">All Posts</a>
-    <a href="/about/">About</a>
-  </div>
+
+  <style>
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      max-width: 1200px;
+      margin-inline: auto;
+      margin-block-end: 40px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--copy);
+      margin-inline-start: 24px;
+      font-size: 1.25rem;
+    }
+
+    .pageLinks {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    img {
+      height: 32px;
+    }
+  </style>
 </nav>
-
-<style>
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
-    max-width: 1200px;
-    margin-inline: auto;
-    margin-block-end: 40px;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--copy);
-    margin-inline-start: 24px;
-    font-size: 1.25rem;
-  }
-
-  .pageLinks {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  img {
-    height: 32px;
-  }
-</style>
