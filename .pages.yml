@@ -1,0 +1,68 @@
+content:
+  - name: blog
+    label: Writing
+    path: src/data/writing
+    filename: '{year}-{month}-{day}-{fields.title}.md'
+    type: collection
+    view:
+      fields: [ title, date, "tags[0]" ]
+      primary: title
+      default:
+        sort: date
+  
+    fields:
+      - name: title
+        label: Title
+        type: string
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: date
+        label: Publication Date
+        type: date
+        options:
+          format: MM/dd/yyyy
+
+      - name: body
+        label: Body
+        type: rich-text
+
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+
+      - name: images
+        label: Images
+        type: image
+        list: true
+
+  - name: site-settings
+    label: Site Settings
+    path: src/config/site.json
+    type: file
+    fields:
+      - name: title
+        label: Max Taylor
+        type: string
+
+      - name: description
+        label: Website description
+        type: string
+        description: Will be used for any page with no description.
+
+      - name: url
+        label: Website URL
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+
+      - name: cover
+        label: Preview image
+        type: image
+        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+
+media:
+  input: public/media
+  output: /media

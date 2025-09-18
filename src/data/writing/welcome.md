@@ -1,17 +1,15 @@
 ---
-title: 'Welcome! Everything is fine.'
-description: 'What this blog is all about'
-date: "2024-06-15"
-tags: 
-- html
-- css
-- javascript
-- react
-- design engineering
-- learning new skills
+title: Welcome! Everything is fine.
+description: What this blog is all about
+pubDate: 06/15/2024
+tags:
+  - html
+  - css
+  - javascript
+  - react
+  - design engineering
+  - learning new skills
 ---
-
-
 Welcome to my page. As I write this it’s a whole lot of nothing, though if you’re reading this it’s likely morphed into something worth visiting by now, in which case it seems like I’ve achieved at least some of my objectives in building it.
 
 ## So what's this site all about?
@@ -34,5 +32,4 @@ Once I have a design system, the next logical move is to use it to build a React
 
 I also want to improve my animation skills and play around with scroll animations and some JS libraries, so I want to build some sort of Scrollytelling site.
 
-Beyond that, I’ll probably devote some time to just experimenting with building cool things and finding inspiration from others in the Design Engineering space. There was a
-[great talk](https://www.youtube.com/watch?v=loKm4JcT4U4) by Jhey Thomas at this year’s Config that was particularly inspiring!
+Beyond that, I’ll probably devote some time to just experimenting with building cool things and finding inspiration from others in the Design Engineering space. There was a [great talk](https://www.youtube.com/watch?v=loKm4JcT4U4) by Jhey Thomas at this year’s Config that was particularly inspiring!
