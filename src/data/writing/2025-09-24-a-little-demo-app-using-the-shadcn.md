@@ -3,6 +3,9 @@ title: A little demo app using the Shadcn
 date: 2025-09-24
 tags:
   - notes
+  - today-i-made
+  - demo
+  - react
 images:
   - /media/demo.gif
 ---
