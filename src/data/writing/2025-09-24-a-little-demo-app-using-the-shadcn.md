@@ -1,5 +1,6 @@
 ---
 title: A little demo app using the Shadcn
+description: My first time using a component library.
 date: 2025-09-24
 tags:
   - notes
