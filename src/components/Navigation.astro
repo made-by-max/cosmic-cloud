@@ -5,13 +5,11 @@ import { Image } from "astro:assets";
 
 <nav>
   <div>
-    <div>
-      <a href="/"> <Image src={madebymax} alt="Home" height="32" /> </a>
-    </div>
-    <div class="pageLinks">
-      <a href="/writing/">All Posts</a>
-      <a href="/about/">About</a>
-    </div>
+    <a href="/"> <Image src={madebymax} alt="Home" height="32" /> </a>
+  </div>
+  <div class="pageLinks">
+    <a href="/writing/">All Posts</a>
+    <a href="/about/">About</a>
   </div>
 
   <style>
@@ -20,17 +18,22 @@ import { Image } from "astro:assets";
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      padding: 24px;
-      max-width: 1200px;
+      margin-block-end: var(--size-8);
+
+      max-width: var(--max-width);
+      padding-inline: var(--size-fluid-3);
       margin-inline: auto;
-      margin-block-end: 40px;
+
+      @media (width < 500px) {
+        padding: 1rem;
+      }
     }
 
     nav a {
       text-decoration: none;
-      color: var(--copy);
-      margin-inline-start: 24px;
-      font-size: 1.25rem;
+      color: var(--text-1);
+      margin-inline-start: var(--size-5);
+      font-size: var(--font-size-fluid-0);
     }
 
     .pageLinks {
@@ -38,7 +41,7 @@ import { Image } from "astro:assets";
       flex-wrap: wrap;
     }
     img {
-      height: 32px;
+      height: var(--size-7);
     }
   </style>
 </nav>

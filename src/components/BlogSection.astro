@@ -18,6 +18,19 @@ const cta = { text: "All posts", href: "/writing" };
 ---
 
 <Section>
-  <SectionHeader heading={heading} cta={cta} />
+  <h2>{heading}</h2>
   {suggestedEntries.map((post) => <BlogCard post={post} />)}
 </Section>
+<div class="cta">
+  <a href={cta.href}>{cta.text} &rarr;</a>
+</div>
+
+<style>
+  .cta {
+    margin-block-start: var(--size-8);
+
+    a {
+      font-size: var(--font-size-fluid-1);
+    }
+  }
+</style>

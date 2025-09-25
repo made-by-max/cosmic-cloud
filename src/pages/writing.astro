@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BlogCard from "../components/BlogCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Wrapper from "../components/Wrapper.astro";
 import TagCloud from "../components/TagCloud.astro";
 
 const posts = await getCollection("writing");
@@ -17,9 +16,28 @@ const pageTitle = "All Posts";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <Wrapper>
-    <h1>{heading}</h1>
+  <h1>{heading}</h1>
+  <div class="container">
     <TagCloud />
     {posts.map((post) => <BlogCard post={post} />)}
-  </Wrapper>
+  </div>
 </BaseLayout>
+
+<!-- <style>
+  .container {
+    display: grid;
+    gap: var(--size-fluid-3);
+    grid-template-columns: 3fr, 1fr;
+  }
+
+  .post-list {
+    grid-column: 1;
+  }
+  aside {
+    grid-column: 2;
+
+    @media (max-width: 50rem) {
+      display: none;
+    }
+  }
+</style> -->
