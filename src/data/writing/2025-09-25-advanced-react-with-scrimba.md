@@ -4,6 +4,7 @@ description: Finished at last!
 date: 2025-09-25
 tags:
   - notes
+  - learning
 ---
 Today I wrapped up [Scrimba's Advanced React Course](https://scrimba.com/advanced-react-c02h), which means I'm basically done with their [Frontend Developer Career Path](https://scrimba.com/frontend-path-c0j) (aside from the Getting Hired module). I've been working on the career path on and off for about two years, so it feels incredible to finally be wrapping it up. I actually made it through the Advanced React course in just two weeks thanks in large part to finally getting properly medicated for my ADHD. Next up, I want to deep dive on CSS and animations.
 
