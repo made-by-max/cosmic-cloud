@@ -1,7 +1,8 @@
-<div class="wrapper-wide">
+<div class="grid-auto-fit">
   <slot />
 </div>
 
+<!-- 
 <style>
   .wrapper-wide {
     max-width: 800px;
@@ -13,5 +14,13 @@
         padding: 0 24px;
       }
     }
+  }
+</style> -->
+
+<style>
+  .grid-auto-fit {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
 </style>

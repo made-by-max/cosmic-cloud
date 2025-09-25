@@ -28,23 +28,61 @@ const pageTitle = post.data.title;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <Wrapper>
-    <div class="post">
-      <!-- <p class="post-date">Posted on: {post.data.date.toLocaleDateString()}</p> -->
+  <div>
+    <div class="post-header">
       <h1 class="post-heading">{post.data.title}</h1>
 
-      <div>
-        {
-          post.data.tags.map((tag) => (
-            <p class="post-tags">
-              <a href={`/tags/${tag}`}>#{tag}</a>
-            </p>
-          ))
-        }
+      <div class="post-metadata">
+        <p class="post-date">
+          Posted on: {post.data.date.toLocaleDateString()}
+        </p>
+        <div>
+          {
+            post.data.tags.map((tag) => (
+              <p class="post-tags">
+                <a href={`/tags/${tag}`}>#{tag}</a>
+              </p>
+            ))
+          }
+        </div>
       </div>
-      <p class="post-description">{post.data.description}</p>
 
-      <Content />
+      <!-- <p class="post-description">{post.data.description}</p> -->
     </div>
-  </Wrapper>
+    <div class="post-container">
+      <article>
+        <Content />
+      </article>
+
+      <aside>
+        <h4>Table of Contents</h4>
+      </aside>
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  .post-container {
+    display: grid;
+    gap: var(--size-fluid-3);
+    grid-template-columns: 3fr, 1fr;
+  }
+
+  article {
+    grid-column: 1;
+  }
+  aside {
+    grid-column: 2;
+
+    @media (max-width: 50rem) {
+      display: none;
+    }
+  }
+  .post-metadata {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: last baseline;
+    gap: var(--size-fluid-3);
+  }
+</style>
