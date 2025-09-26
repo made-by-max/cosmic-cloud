@@ -2,24 +2,12 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 
-import type { CollectionEntry } from "astro:content";
-
-export async function getStaticPaths() {
-  const posts = await getCollection("writing");
-  posts.sort((a, b) => {
-    const dateA = new Date(a.data.date);
-    const dateB = new Date(b.data.date);
-    return dateB.getTime() - dateA.getTime();
-  });
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post },
-  }));
-}
-
-interface Props {
-  post: CollectionEntry<"writing">;
-}
+const posts = await getCollection("writing");
+posts.sort((a, b) => {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime();
+});
 
 const { post } = Astro.props;
 const { Content } = await render(post);
