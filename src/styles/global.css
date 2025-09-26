@@ -34,11 +34,16 @@
   --indigo-10: #2f44ad;
   --indigo-11: #283a94;
   --indigo-12: #21307a;
+  --blue-10: #145591;
+  --teal-4: #38d9a9;
+  --pink-10: #8c1941;
+
 
   /* Light and dark modes */
   /* light */
-  --brand-light: var(--indigo-6);
-  --brand-light-soft: var(--indigo-4);
+  --brand-light: var(--indigo-10);
+  --brand-light-soft: var(--indigo-9);
+  --accent-light: var(--pink-10);
   --text-1-light: var(--gray-8);
   --text-2-light: var(--gray-7);
   --surface-1-light: var(--gray-0);
@@ -50,10 +55,12 @@
 
   /* dark */
   --brand-dark: var(--indigo-3);
-  --brand-light-soft: var(--indigo-2);
+  --brand-dark-soft: var(--indigo-2);
+  --accent-dark: var(--teal-4);
   --text-1-dark: var(--gray-3);
   --text-2-dark: var(--gray-5);
-  --surface-1-dark: var(--gray-12);
+  --accent-dark: var(var(--teal-4));
+  --surface-1-dark: var(--gray-10);
   --surface-2-dark: var(--gray-11);
   --surface-3-dark: var(--gray-10);
   --surface-4-dark: var(--gray-9);
@@ -133,6 +140,7 @@
   /* set defaults */
   --brand: var(--brand-light);
   --brand-soft: var(--brand-light-soft);
+  --accent: var(--accent-light);
   --text-1: var(--text-1-light);
   --text-2: var(--text-2-light);
   --surface-1: var(--surface-1-light);
@@ -149,6 +157,7 @@
 
     --brand: var(--brand-dark);
     --brand-soft: var(--brand-dark-soft);
+    --accent: var(--accent-dark);
     --text-1: var(--text-1-dark);
     --text-2: var(--text-2-dark);
     --surface-1: var(--surface-1-dark);
@@ -165,6 +174,7 @@
 
   --brand: var(--brand-light);
   --brand-soft: var(--brand-light-soft);
+  --accent: var(--accent-light);
   --text-1: var(--text-1-light);
   --text-2: var(--text-2-light);
   --surface-1: var(--surface-1-light);
@@ -180,6 +190,7 @@
   
   --brand: var(--brand-dark);
   --brand-soft: var(--brand-dark-soft);
+  --accent: var(--accent-dark);
   --text-1: var(--text-1-dark);
   --text-2: var(--text-2-dark);
   --surface-1: var(--surface-1-dark);
@@ -194,7 +205,7 @@
   body {
     min-block-size: 100vh;
     font-family: var(--font-sans);
-   background: var(--surface-3);
+   background: var(--surface-1);
   }
    
     /* Layout */
@@ -283,6 +294,7 @@
   a:hover, a:focus {
     text-decoration: underline;
     text-underline-offset: .2em;
+    color: var(--brand-soft)
   }
 
   input,
@@ -305,6 +317,10 @@
 
 
 /* Post Styles */
+
+.post-card {
+  margin-block-end: var(--size-fluid-6);
+}
 
 .post-date {
     font-size: var(--font-size-fluid--1);
@@ -341,10 +357,23 @@
     flex-wrap: wrap;
     align-items: center;
     gap: var(--size-3);
-    margin-block-end: var(--size-8);
+    margin-block-end: var(--size-6);
+  }
+
+  .post-heading {
+    margin-block-start: 0;
   }
   .post-heading h1 {
     margin-block-end: 0;
+  }
+
+  .post-type {
+    font-size: var(--font-size-fluid--2);
+    text-transform: uppercase;
+    color: var(--accent);
+    letter-spacing: .1rem;
+    font-weight: 500;
+    margin-block-end: var(--size-1);
   }
 
   /* media */

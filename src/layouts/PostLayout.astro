@@ -17,6 +17,7 @@ const pageTitle = post.data.title;
 <BaseLayout pageTitle={pageTitle}>
   <div>
     <div class="post-header">
+      <p class="post-type">{post.data.type}</p>
       <h1 class="post-heading">{post.data.title}</h1>
 
       <div class="post-metadata">

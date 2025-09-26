@@ -2,6 +2,7 @@
 title: 100 days of code
 description: My experience doing the 100 days of code challenge.
 date: 2020-03-24
+type: Article
 tags:
   - blog
   - learning
