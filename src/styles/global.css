@@ -268,13 +268,19 @@
   }
 
   a {
-    text-decoration: underline var(--brand-light);
+    text-decoration: underline var(--brand);
     text-underline-offset: .2em;
     color: inherit;
+
+      @media (max-width: 50rem) {
+      text-decoration: underline var(--brand);
+        color: var(--brand);
+    }
+
   }
 
   a:hover, a:focus {
-    color: var(--brand-light);
+    color: var(--brand);
   }
 
   input,
