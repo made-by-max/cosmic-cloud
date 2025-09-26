@@ -58,6 +58,7 @@
   --shadow-strength-dark: 80%;
 
   /* Typography */
+
 --font-sans: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
 --font-mono: Dank Mono,Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo, Consolas, DejaVu Sans Mono, monospace;
 
@@ -118,6 +119,7 @@
 
 
 :root {
+    
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;

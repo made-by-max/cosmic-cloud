@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
-import Wrapper from "../components/Wrapper.astro";
 
 import type { CollectionEntry } from "astro:content";
 
@@ -54,22 +53,25 @@ const pageTitle = post.data.title;
         <Content />
       </article>
 
-      <aside>
+      <!-- <aside>
         <h4>Table of Contents</h4>
-      </aside>
+      </aside> -->
     </div>
   </div>
 </BaseLayout>
 
-<style>
-  .post-container {
+<!-- <style>
+  /* .post-container {
     display: grid;
     gap: var(--size-fluid-3);
-    grid-template-columns: 1fr minmax(250px, 300px);
+    grid-template-columns: auto minmax(250px, 300px);
   }
 
   article {
     grid-column: 1;
+    @media (max-width: 50rem) {
+      grid-column: 1/-1;
+    }
   }
   aside {
     grid-column: 2;
@@ -77,12 +79,12 @@ const pageTitle = post.data.title;
     @media (max-width: 50rem) {
       display: none;
     }
-  }
-  .post-metadata {
+  } */
+  /* .post-metadata {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: last baseline;
     gap: var(--size-fluid-3);
-  }
-</style>
+  } */
+</style> -->

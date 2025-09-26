@@ -37,6 +37,9 @@ const pageTitle = "All Posts";
 
   .post-list {
     grid-column: 1;
+    @media (max-width: 50rem) {
+      grid-column: 1/-1;
+    }
   }
   aside {
     grid-column: 2;
