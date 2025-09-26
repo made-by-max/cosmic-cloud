@@ -1,5 +1,6 @@
 ---
 title: Advanced React with Scrimba
+type: Note
 description: Finished at last!
 date: 2025-09-25
 tags:
