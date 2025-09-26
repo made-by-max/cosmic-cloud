@@ -18,16 +18,21 @@ const pageTitle = "All Posts";
 <BaseLayout pageTitle={pageTitle}>
   <h1>{heading}</h1>
   <div class="container">
-    <TagCloud />
-    {posts.map((post) => <BlogCard post={post} />)}
+    <div class="post-list">
+      {posts.map((post) => <BlogCard post={post} />)}
+    </div>
+
+    <aside>
+      <TagCloud />
+    </aside>
   </div>
 </BaseLayout>
 
-<!-- <style>
+<style>
   .container {
     display: grid;
     gap: var(--size-fluid-3);
-    grid-template-columns: 3fr, 1fr;
+    grid-template-columns: 1fr minmax(250px, 300px);
   }
 
   .post-list {
@@ -40,4 +45,4 @@ const pageTitle = "All Posts";
       display: none;
     }
   }
-</style> -->
+</style>
