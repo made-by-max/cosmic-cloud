@@ -6,35 +6,40 @@ interface Props {
 }
 
 const { post } = Astro.props;
+const cta = { text: "Read more", href: `/writing/${post.id}` };
 ---
 
 <div class="post-card">
-  <h3 class="post-title">
-    <a href=`/writing/${post.id}`>{post.data.title}</a>
+  <h3 class="post-heading">
+    {post.data.title}
   </h3>
 
   <div class="post-metadata">
-    <p class="post-date">
-      Posted on: {post.data.date.toLocaleDateString()}
-    </p>
-    <div>
-      {
-        post.data.tags.map((tag) => (
-          <p class="post-tags">
-            <a href={`/tags/${tag}`}>#{tag}</a>
-          </p>
-        ))
-      }
+    <div class="post-date">
+      <span class="material-symbols-outlined"> calendar_today </span>
+      {post.data.date.toLocaleDateString()}
+    </div>
+
+    <div class="post-tags">
+      <span class="material-symbols-outlined"> sell </span>
+      {post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
     </div>
   </div>
+  <p class="post-description">
+    {post.data.description}
+  </p>
 
-  <style>
-    .post-metadata {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: var(--size-fluid-3);
-    }
-  </style>
+  <div class="cta">
+    <a href={cta.href}>{cta.text} &rarr;</a>
+  </div>
 </div>
+
+<style>
+  .cta {
+    margin-block-start: var(--size-1);
+
+    a {
+      font-size: var(--font-size-fluid-0);
+    }
+  }
+</style>
