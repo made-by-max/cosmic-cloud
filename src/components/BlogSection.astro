@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import Section from "./Section.astro";
 import BlogCard from "./BlogCard.astro";
-import SectionHeader from "./SectionHeader.astro";
 
 const posts = await getCollection("writing");
 posts.sort((a, b) => {

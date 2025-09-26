@@ -2,6 +2,7 @@
 title: What I learned from completing my first one hundred day challenge
 date: 2020-01-31
 description: Why I decided to do 100 days of vector illustrations.
+type: Article
 tags:
 - blog
 - illustration

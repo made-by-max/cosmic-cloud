@@ -2,6 +2,7 @@
 title: My Meandering Path to UX
 date: 2019-04-05
 description: 'How I Transitioned from Librarian to Product Designer'
+type: Article
 tags: 
 - blog
 - product design

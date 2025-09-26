@@ -8,6 +8,9 @@ const writing = defineCollection({
     description: z.string().max(400),
     date: z.date(),
     tags: z.array(z.string()),
+    type: z.string(),
+    // type: z.enum(['Article', 'Note', 'Project', 'Demo']),
+
   }),
 });
 

@@ -5,6 +5,7 @@ description: What’s a UX Librarian? It’s a question I get asked a lot during
   accompanied by a bewildered tone and a skeptical look. Surely I’m just making
   this up?
 date: 2018-03-08
+type: Article
 tags:
   - blog
   - product design

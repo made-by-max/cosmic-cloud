@@ -2,6 +2,7 @@
 title: Learning in Public
 description: Follow along on my learning journey
 date: 2024-05-10
+type: Article
 tags:
   - blog
   - design engineering
