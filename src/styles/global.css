@@ -287,7 +287,7 @@
 
   a {
     color: inherit;
-    /* text-decoration: underline 2px var(--brand); */
+    text-decoration: underline 2px var(--brand);
     /* text-underline-offset: .3em; */
   }
 
@@ -295,7 +295,7 @@
   a:hover, a:focus {
   
     color: var(--brand-soft);
-    /* text-decoration: underline 2px var(--brand); */
+  
   }
 
   input,
