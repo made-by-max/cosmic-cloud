@@ -288,7 +288,7 @@
   a {
     color: inherit;
     text-decoration: underline 2px var(--brand);
-    text-underline-offset: .3em;
+    /* text-underline-offset: .3em; */
   }
 
 
