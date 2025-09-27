@@ -131,8 +131,8 @@
 :root {
     
   box-sizing: border-box;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+  /* -webkit-text-size-adjust: none;
+  text-size-adjust: none; */
 
   /* color schemes */
      color-scheme: light;
@@ -286,15 +286,16 @@
   }
 
   a {
-        color: var(--brand);
-        text-decoration: none;
-    }
+    color: inherit;
+    text-decoration: underline 2px var(--brand);
+    text-underline-offset: .3em;
+  }
 
 
   a:hover, a:focus {
-    text-decoration: underline;
-    text-underline-offset: .2em;
-    color: var(--brand-soft)
+  
+    color: var(--brand-soft);
+    text-decoration: underline 2px var(--brand);
   }
 
   input,
