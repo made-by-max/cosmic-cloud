@@ -1,5 +1,5 @@
 ---
-title: A little demo app using the Shadcn
+title: A little demo app using Shadcn
 description: My first time using a component library.
 date: 2025-09-24
 type: Demo

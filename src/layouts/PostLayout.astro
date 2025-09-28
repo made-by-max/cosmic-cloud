@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
-
 const posts = await getCollection("writing");
 posts.sort((a, b) => {
   const dateA = new Date(a.data.date);
@@ -18,7 +17,9 @@ const pageTitle = post.data.title;
   <div>
     <div class="post-header">
       <p class="post-type">{post.data.type}</p>
-      <h1 class="post-heading">{post.data.title}</h1>
+      <h1 class="post-heading">
+        {post.data.title}
+      </h1>
 
       <div class="post-metadata">
         <div class="post-date">

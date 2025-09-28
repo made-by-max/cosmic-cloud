@@ -1,5 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
+import { ClientRouter } from "astro:transitions";
+
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
@@ -17,6 +19,7 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="generator" content={Astro.generator} />
+    <ClientRouter />
     <title>{pageTitle}</title>
   </head>
   <body>
