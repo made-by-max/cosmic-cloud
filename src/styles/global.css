@@ -1,158 +1,192 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *:before,
 *:after {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-   /* Neutral colors */
-  --gray-0: #f8f9fa;
-  --gray-1: #f1f3f5;
-  --gray-2: #e9ecef;
-  --gray-3: #dee2e6;
-  --gray-4: #ced4da;
-  --gray-5: #adb5bd;
-  --gray-6: #868e96;
-  --gray-7: #495057;
-  --gray-8: #343a40;
-  --gray-9: #212529;
-  --gray-10: #16191d;
-  --gray-11: #0d0f12;
-  --gray-12: #030507;
+    /* Neutral colors */
+    --gray-0: #f8f9fa;
+    --gray-1: #f1f3f5;
+    --gray-2: #e9ecef;
+    --gray-3: #dee2e6;
+    --gray-4: #ced4da;
+    --gray-5: #adb5bd;
+    --gray-6: #868e96;
+    --gray-7: #495057;
+    --gray-8: #343a40;
+    --gray-9: #212529;
+    --gray-10: #16191d;
+    --gray-11: #0d0f12;
+    --gray-12: #030507;
 
-  /* Indigo -- swap out any brand color */
+    /* Indigo -- swap out any brand color */
     --indigo-0: #edf2ff;
-  --indigo-1: #dbe4ff;
-  --indigo-2: #bac8ff;
-  --indigo-3: #91a7ff;
-  --indigo-4: #748ffc;
-  --indigo-5: #5c7cfa;
-  --indigo-6: #4c6ef5;
-  --indigo-7: #4263eb;
-  --indigo-8: #3b5bdb;
-  --indigo-9: #364fc7;
-  --indigo-10: #2f44ad;
-  --indigo-11: #283a94;
-  --indigo-12: #21307a;
-  --blue-10: #145591;
-  --teal-4: #38d9a9;
-  --pink-10: #8c1941;
+    --indigo-1: #dbe4ff;
+    --indigo-2: #bac8ff;
+    --indigo-3: #91a7ff;
+    --indigo-4: #748ffc;
+    --indigo-5: #5c7cfa;
+    --indigo-6: #4c6ef5;
+    --indigo-7: #4263eb;
+    --indigo-8: #3b5bdb;
+    --indigo-9: #364fc7;
+    --indigo-10: #2f44ad;
+    --indigo-11: #283a94;
+    --indigo-12: #21307a;
+    --blue-10: #145591;
+    --teal-4: #38d9a9;
+    --pink-10: #8c1941;
 
+    /* Light and dark modes */
+    /* light */
+    --brand-light: var(--indigo-10);
+    --brand-light-soft: var(--indigo-9);
+    --accent-light: var(--pink-10);
+    --text-1-light: var(--gray-8);
+    --text-2-light: var(--gray-7);
+    --surface-1-light: var(--gray-0);
+    --surface-2-light: var(--gray-1);
+    --surface-3-light: var(--gray-2);
+    --surface-4-light: var(--gray-3);
+    --surface-shadow-light: var(--gray-8-hsl);
+    --shadow-strength-light: 2%;
 
-  /* Light and dark modes */
-  /* light */
-  --brand-light: var(--indigo-10);
-  --brand-light-soft: var(--indigo-9);
-  --accent-light: var(--pink-10);
-  --text-1-light: var(--gray-8);
-  --text-2-light: var(--gray-7);
-  --surface-1-light: var(--gray-0);
-  --surface-2-light: var(--gray-1);
-  --surface-3-light: var(--gray-2);
-  --surface-4-light: var(--gray-3);
-  --surface-shadow-light: var(--gray-8-hsl);
-  --shadow-strength-light: 2%;
+    /* dark */
+    --brand-dark: var(--indigo-3);
+    --brand-dark-soft: var(--indigo-2);
+    --accent-dark: var(--teal-4);
+    --text-1-dark: var(--gray-3);
+    --text-2-dark: var(--gray-5);
+    --accent-dark: var(var(--teal-4));
+    --surface-1-dark: var(--gray-10);
+    --surface-2-dark: var(--gray-11);
+    --surface-3-dark: var(--gray-10);
+    --surface-4-dark: var(--gray-9);
+    --surface-shadow-dark: var(--gray-12-hsl);
+    --shadow-strength-dark: 80%;
 
-  /* dark */
-  --brand-dark: var(--indigo-3);
-  --brand-dark-soft: var(--indigo-2);
-  --accent-dark: var(--teal-4);
-  --text-1-dark: var(--gray-3);
-  --text-2-dark: var(--gray-5);
-  --accent-dark: var(var(--teal-4));
-  --surface-1-dark: var(--gray-10);
-  --surface-2-dark: var(--gray-11);
-  --surface-3-dark: var(--gray-10);
-  --surface-4-dark: var(--gray-9);
-  --surface-shadow-dark: var(--gray-12-hsl);
-  --shadow-strength-dark: 80%;
+    /* Typography */
 
-  /* Typography */
+    --font-sans:
+        "Red Hat Text", Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans,
+        source-sans-pro, sans-serif;
+    --font-mono:
+        Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono,
+        Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo,
+        Consolas, DejaVu Sans Mono, monospace;
 
---font-sans: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
---font-mono: Dank Mono,Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo, Consolas, DejaVu Sans Mono, monospace;
+    --font-size-00: 0.5rem;
+    --font-size-0: 0.75rem;
+    --font-size-1: 1rem;
+    --font-size-2: 1.1rem;
+    --font-size-3: 1.25rem;
+    --font-size-4: 1.5rem;
+    --font-size-5: 2rem;
+    --font-size-6: 2.5rem;
+    --font-size-7: 3rem;
+    --font-size-8: 3.5rem;
 
-  --font-size-00: .5rem;
-  --font-size-0: .75rem;
-  --font-size-1: 1rem;
-  --font-size-2: 1.1rem;
-  --font-size-3: 1.25rem;
-  --font-size-4: 1.5rem;
-  --font-size-5: 2rem;
-  --font-size-6: 2.5rem;
-  --font-size-7: 3rem;
-  --font-size-8: 3.5rem;
+    --font-size-fluid--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+    --font-size-fluid--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+    --font-size-fluid-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+    --font-size-fluid-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+    --font-size-fluid-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+    --font-size-fluid-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+    --font-size-fluid-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+    --font-size-fluid-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+    --font-size-fluid-6: clamp(3.3592rem, 2.7828rem + 2.5621vw, 4.7684rem);
+    --font-size-fluid-7: clamp(4.0311rem, 3.2418rem + 3.508vw, 5.9605rem);
+    --font-size-fluid-8: clamp(4.8373rem, 3.7682rem + 4.7514vw, 7.4506rem);
 
-  --font-size-fluid--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
-  --font-size-fluid--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
-  --font-size-fluid-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
-  --font-size-fluid-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
-  --font-size-fluid-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
-  --font-size-fluid-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
-  --font-size-fluid-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
-  --font-size-fluid-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
-  --font-size-fluid-6: clamp(3.3592rem, 2.7828rem + 2.5621vw, 4.7684rem);
-  --font-size-fluid-7: clamp(4.0311rem, 3.2418rem + 3.508vw, 5.9605rem);
-  --font-size-fluid-8: clamp(4.8373rem, 3.7682rem + 4.7514vw, 7.4506rem);
-  
-
-   /* Sizing */
-  --size-000: -.5rem;
-  --size-00: -.25rem;
-  --size-1: .25rem;
-  --size-2: .5rem;
-  --size-3: 1rem;
-  --size-4: 1.25rem;
-  --size-5: 1.5rem;
-  --size-6: 1.75rem;
-  --size-7: 2rem;
-  --size-8: 3rem;
-  --size-9: 4rem;
-  --size-10: 5rem;
-  --size-11: 7.5rem;
-  --size-12: 10rem;
-  --size-13: 15rem;
-  --size-14: 20rem;
-  --size-15: 30rem;
-  --size-fluid-1: clamp(.5rem, 1vw, 1rem);
-  --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
-  --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
-  --size-fluid-4: clamp(2rem, 4vw, 3rem);
-  --size-fluid-5: clamp(4rem, 5vw, 5rem);
-  --size-fluid-6: clamp(5rem, 7vw, 7.5rem);
-  --size-fluid-7: clamp(7.5rem, 10vw, 10rem);
-  --size-fluid-8: clamp(10rem, 20vw, 15rem);
-  --size-fluid-9: clamp(15rem, 30vw, 20rem);
-  --size-fluid-10: clamp(20rem, 40vw, 30rem);
-  --max-width: 76rem;
+    /* Sizing */
+    --size-000: -0.5rem;
+    --size-00: -0.25rem;
+    --size-1: 0.25rem;
+    --size-2: 0.5rem;
+    --size-3: 1rem;
+    --size-4: 1.25rem;
+    --size-5: 1.5rem;
+    --size-6: 1.75rem;
+    --size-7: 2rem;
+    --size-8: 3rem;
+    --size-9: 4rem;
+    --size-10: 5rem;
+    --size-11: 7.5rem;
+    --size-12: 10rem;
+    --size-13: 15rem;
+    --size-14: 20rem;
+    --size-15: 30rem;
+    --size-fluid-1: clamp(0.5rem, 1vw, 1rem);
+    --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
+    --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
+    --size-fluid-4: clamp(2rem, 4vw, 3rem);
+    --size-fluid-5: clamp(4rem, 5vw, 5rem);
+    --size-fluid-6: clamp(5rem, 7vw, 7.5rem);
+    --size-fluid-7: clamp(7.5rem, 10vw, 10rem);
+    --size-fluid-8: clamp(10rem, 20vw, 15rem);
+    --size-fluid-9: clamp(15rem, 30vw, 20rem);
+    --size-fluid-10: clamp(20rem, 40vw, 30rem);
+    --max-width: 76rem;
 }
 
-
 :root {
-    
-  box-sizing: border-box;
-  /* -webkit-text-size-adjust: none;
+    box-sizing: border-box;
+    /* -webkit-text-size-adjust: none;
   text-size-adjust: none; */
 
-  /* color schemes */
-     color-scheme: light;
+    /* color schemes */
+    color-scheme: light;
 
-  /* set defaults */
-  --brand: var(--brand-light);
-  --brand-soft: var(--brand-light-soft);
-  --accent: var(--accent-light);
-  --text-1: var(--text-1-light);
-  --text-2: var(--text-2-light);
-  --surface-1: var(--surface-1-light);
-  --surface-2: var(--surface-2-light);
-  --surface-3: var(--surface-3-light);
-  --surface-4: var(--surface-4-light);
-  --surface-shadow: var(--surface-shadow-light);
-  --shadow-strength: var(--shadow-strength-light);
+    /* set defaults */
+    --brand: var(--brand-light);
+    --brand-soft: var(--brand-light-soft);
+    --accent: var(--accent-light);
+    --text-1: var(--text-1-light);
+    --text-2: var(--text-2-light);
+    --surface-1: var(--surface-1-light);
+    --surface-2: var(--surface-2-light);
+    --surface-3: var(--surface-3-light);
+    --surface-4: var(--surface-4-light);
+    --surface-shadow: var(--surface-shadow-light);
+    --shadow-strength: var(--shadow-strength-light);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+    :root {
+        color-scheme: dark;
+
+        --brand: var(--brand-dark);
+        --brand-soft: var(--brand-dark-soft);
+        --accent: var(--accent-dark);
+        --text-1: var(--text-1-dark);
+        --text-2: var(--text-2-dark);
+        --surface-1: var(--surface-1-dark);
+        --surface-2: var(--surface-2-dark);
+        --surface-3: var(--surface-3-dark);
+        --surface-4: var(--surface-4-dark);
+        --surface-shadow: var(--surface-shadow-dark);
+        --shadow-strength: var(--shadow-strength-dark);
+    }
+}
+
+[color-scheme="light"] {
+    color-scheme: light;
+
+    --brand: var(--brand-light);
+    --brand-soft: var(--brand-light-soft);
+    --accent: var(--accent-light);
+    --text-1: var(--text-1-light);
+    --text-2: var(--text-2-light);
+    --surface-1: var(--surface-1-light);
+    --surface-2: var(--surface-2-light);
+    --surface-3: var(--surface-3-light);
+    --surface-4: var(--surface-4-light);
+    --surface-shadow: var(--surface-shadow-light);
+    --shadow-strength: var(--shadow-strength-light);
+}
+
+[color-scheme="dark"] {
     color-scheme: dark;
 
     --brand: var(--brand-dark);
@@ -166,75 +200,45 @@
     --surface-4: var(--surface-4-dark);
     --surface-shadow: var(--surface-shadow-dark);
     --shadow-strength: var(--shadow-strength-dark);
-  }
 }
 
-[color-scheme="light"] {
-  color-scheme: light;
-
-  --brand: var(--brand-light);
-  --brand-soft: var(--brand-light-soft);
-  --accent: var(--accent-light);
-  --text-1: var(--text-1-light);
-  --text-2: var(--text-2-light);
-  --surface-1: var(--surface-1-light);
-  --surface-2: var(--surface-2-light);
-  --surface-3: var(--surface-3-light);
-  --surface-4: var(--surface-4-light);
-  --surface-shadow: var(--surface-shadow-light);
-  --shadow-strength: var(--shadow-strength-light);
-}
-
-[color-scheme="dark"] {
-  color-scheme: dark;
-  
-  --brand: var(--brand-dark);
-  --brand-soft: var(--brand-dark-soft);
-  --accent: var(--accent-dark);
-  --text-1: var(--text-1-dark);
-  --text-2: var(--text-2-dark);
-  --surface-1: var(--surface-1-dark);
-  --surface-2: var(--surface-2-dark);
-  --surface-3: var(--surface-3-dark);
-  --surface-4: var(--surface-4-dark);
-  --surface-shadow: var(--surface-shadow-dark);
-  --shadow-strength: var(--shadow-strength-dark);
-}
-
-
-  body {
+body {
     min-block-size: 100vh;
     font-family: var(--font-sans);
-   background: var(--surface-1);
-  }
-   
-    /* Layout */
+    background: var(--surface-1);
+}
 
-  main {
-      max-width: var(--max-width);
-      padding-inline: var(--size-fluid-3);
-      margin-inline: auto;
+/* Layout */
 
-     @media (width < 500px) {
+main {
+    max-width: var(--max-width);
+    padding-inline: var(--size-fluid-3);
+    margin-inline: auto;
+
+    @media (width < 500px) {
         padding: 1rem;
     }
-  }
-
-
+}
 
 /* Typography */
 
-  h1,
-  h2 {
+h1,
+h2 {
     font-weight: 900;
     letter-spacing: -0.02rem;
-  }
-  
-  h1, h2, h3, h4, button, input, label{
-    line-height: 1.1;
-  }
+}
 
-  h1,
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+h1,
   h2,
   h3,
   h4,
@@ -243,86 +247,81 @@
     text-wrap: balance;
     margin-block-start: var(--size-9);
     margin-block-end: var(--size-4);
-  }
+}
 
-  h2 + h3 {
+h2 + h3 {
     margin-block-start: 0;
 }
 
-  h1 {
+h1 {
     font-size: var(--font-size-fluid-6);
-  }
+}
 
-  h2 {
+h2 {
     font-size: var(--font-size-fluid-3);
-  }
+}
 
-  h3 {
+h3 {
     font-size: var(--font-size-fluid-2);
-  }
+}
 
-
-  p,
-  li,
-  dd {
+p,
+li,
+dd {
     font-size: var(--font-size-fluid-0);
     margin-block-end: var(--size-4);
     text-wrap: pretty;
     max-inline-size: 72ch;
     line-height: 1.5;
-  }
+}
 
-  ul,
-  ol,
-  dl {
+ul,
+ol,
+dl {
     margin: 0;
     padding: 0;
     list-style: inside;
     ul,
     ol,
     dl {
-      padding-inline-start: 2ch;
+        padding-inline-start: 2ch;
     }
-  }
+}
 
-  a {
+a {
     color: inherit;
     text-decoration: underline 2px var(--brand);
-    text-underline-offset: .3em;
-     -webkit-text-decoration: underline var(--brand);
-    -webkit-text-underline-offset: .3em;
-  }
+    text-underline-offset: 0.3em;
+    -webkit-text-decoration: underline var(--brand);
+    -webkit-text-underline-offset: 0.3em;
+}
 
-
-  a:hover, a:focus {
-  
+a:hover,
+a:focus {
     color: var(--brand);
-  
-  }
+}
 
-  input,
-  select,
-  textarea,
-  button {
+input,
+select,
+textarea,
+button {
     font: inherit;
     font-size: inherit;
     /* FUTURE: appearance: base; */
-  }
-
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 20
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 20;
+}
 
 /* Post Styles */
 
 .post-card {
-  margin-block-end: var(--size-fluid-6);
+    margin-block-end: var(--size-fluid-6);
 }
 
 .post-date {
@@ -331,28 +330,28 @@
     /* margin-inline: var(--size-1); */
     display: flex;
     align-items: center;
-    gap: var(--size-1); 
+    gap: var(--size-1);
 }
 
 .post-tags {
     font-size: var(--font-size-fluid--1);
     color: var(--text-2);
     /* margin-inline: var(--size-1); */
-      display: flex;
+    display: flex;
     align-items: center;
-    gap: var(--size-1); 
+    gap: var(--size-1);
 }
 
 .post-tags a {
-    margin-inline: .15em;
+    margin-inline: 0.15em;
     text-decoration: none;
     color: inherit;
 }
 
-.post-tags a:hover, a:focus {
+.post-tags a:hover,
+a:focus {
     color: var(--brand);
 }
-
 
 .post-metadata {
     display: flex;
@@ -361,52 +360,51 @@
     align-items: center;
     gap: var(--size-3);
     margin-block-end: var(--size-6);
-  }
+}
 
-  .post-heading {
+.post-heading {
     margin-block-start: 0;
-  }
-  .post-heading h1 {
+}
+.post-heading h1 {
     margin-block-end: 0;
-  }
+}
 
-  .post-type {
+.post-type {
     font-size: var(--font-size-fluid--2);
     text-transform: uppercase;
     color: var(--accent);
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     font-weight: 500;
     margin-block-end: var(--size-1);
-  }
+}
 
-  /* media */
+/* media */
 
-  img,
-  picture, 
-  video,
-  iframe {
+img,
+picture,
+video,
+iframe {
     display: block;
     max-inline-size: 100%;
     block-size: auto;
     border-style: none;
-  }
+}
 
-  figure {
+figure {
     inline-size: fit-content;
     margin-inline: auto;
-  }
-  figcaption {
+}
+figcaption {
     contain: inline-size;
     font-size: 90%;
-  }
+}
 
-  label {
+label {
     display: block;
-  }
-  
+}
 
-  /* A11y */
-  .screenreader-only:not(:focus):not(:active) {
+/* A11y */
+.screenreader-only:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -414,15 +412,13 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
-  :focus-visible {
+}
+:focus-visible {
     outline-offset: 2px;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    @view-transition {
-      navigation: auto;
-    }
 }
 
-
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+}
