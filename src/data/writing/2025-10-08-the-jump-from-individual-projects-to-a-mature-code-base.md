@@ -2,6 +2,7 @@
 title: The jump from individual projects to a mature code base
 type: Note
 description: Trying my had at it
+date: 2025-10-08
 tags:
   - react
   - design-systems
