@@ -3,45 +3,44 @@ import type { CollectionEntry } from "astro:content";
 import { fade } from "astro:transitions";
 
 interface Props {
-  post: CollectionEntry<"writing">;
+    post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
-const cta = { text: "Read more", href: `/writing/${post.id}` };
+const cta = { text: "Read more", href: `/blog/${post.id}` };
 ---
 
 <div class="post-card">
-  <p class="post-type">{post.data.type}</p>
-  <h3 class="post-heading">
-    {post.data.title}
-  </h3>
+    <h3 class="post-heading">
+        {post.data.title}
+    </h3>
 
-  <div class="post-metadata">
-    <div class="post-date">
-      <span class="material-symbols-outlined"> calendar_today </span>
-      {post.data.date.toLocaleDateString()}
+    <div class="post-metadata">
+        <div class="post-date">
+            <span class="material-symbols-outlined"> calendar_today </span>
+            {post.data.date.toLocaleDateString()}
+        </div>
+
+        <div class="post-tags">
+            <span class="material-symbols-outlined"> sell </span>
+            {post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
+        </div>
     </div>
+    <p class="post-description">
+        {post.data.description}
+    </p>
 
-    <div class="post-tags">
-      <span class="material-symbols-outlined"> sell </span>
-      {post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
+    <div class="cta">
+        <a href={cta.href}>{cta.text} &rarr;</a>
     </div>
-  </div>
-  <p class="post-description">
-    {post.data.description}
-  </p>
-
-  <div class="cta">
-    <a href={cta.href}>{cta.text} &rarr;</a>
-  </div>
 </div>
 
 <style>
-  .cta {
-    margin-block-start: var(--size-1);
+    .cta {
+        margin-block-start: var(--size-1);
 
-    a {
-      font-size: var(--font-size-fluid-0);
+        a {
+            font-size: var(--font-size-fluid-0);
+        }
     }
-  }
 </style>

@@ -6,27 +6,27 @@ import type { CollectionEntry } from "astro:content";
 import Wrapper from "../../components/Wrapper.astro";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("writing");
-  const uniqueTags = [
-    ...new Set(allPosts.map((post) => post.data.tags).flat()),
-  ];
+    const allPosts = await getCollection("blog");
+    const uniqueTags = [
+        ...new Set(allPosts.map((post) => post.data.tags).flat()),
+    ];
 
-  return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) =>
-      post.data.tags.includes(tag)
-    );
+    return uniqueTags.map((tag) => {
+        const filteredPosts = allPosts.filter((post) =>
+            post.data.tags.includes(tag),
+        );
 
-    filteredPosts.sort((a, b) => {
-      const dateA = new Date(a.data.date);
-      const dateB = new Date(b.data.date);
-      return dateB.getTime() - dateA.getTime();
+        filteredPosts.sort((a, b) => {
+            const dateA = new Date(a.data.date);
+            const dateB = new Date(b.data.date);
+            return dateB.getTime() - dateA.getTime();
+        });
+
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
     });
-
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
 }
 
 const { tag } = Astro.params;
@@ -34,15 +34,15 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={`Posts tagged with "${tag}"`}>
-  <h1>Posts tagged with "{tag}"</h1>
-  <ul>
-    {
-      posts.map((post) => (
-        <>
-          <BlogCard post={post} />
-          {/* {<h1 class="post-title">{post.data.title}</h1>} */}
-        </>
-      ))
-    }
-  </ul>
+    <h1>Posts tagged with "{tag}"</h1>
+    <ul>
+        {
+            posts.map((post) => (
+                <>
+                    <BlogCard post={post} />
+                    {/* {<h1 class="post-title">{post.data.title}</h1>} */}
+                </>
+            ))
+        }
+    </ul>
 </BaseLayout>

@@ -3,33 +3,33 @@ import { getCollection } from "astro:content";
 import Section from "./Section.astro";
 import BlogCard from "./BlogCard.astro";
 
-const posts = await getCollection("writing");
+const posts = await getCollection("blog");
 posts.sort((a, b) => {
-  const dateA = new Date(a.data.date);
-  const dateB = new Date(b.data.date);
-  return dateB.getTime() - dateA.getTime();
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
 });
 
 const suggestedEntries = posts.slice(0, 3);
 
 const heading = "Latest posts";
-const cta = { text: "All posts", href: "/writing" };
+const cta = { text: "All posts", href: "/blog" };
 ---
 
 <Section>
-  <h2>{heading}</h2>
-  {suggestedEntries.map((post) => <BlogCard post={post} />)}
+    <h2>{heading}</h2>
+    {suggestedEntries.map((post) => <BlogCard post={post} />)}
 </Section>
 <div class="cta">
-  <a href={cta.href}>{cta.text} &rarr;</a>
+    <a href={cta.href}>{cta.text} &rarr;</a>
 </div>
 
 <style>
-  .cta {
-    margin-block-start: var(--size-8);
+    .cta {
+        margin-block-start: var(--size-8);
 
-    a {
-      font-size: var(--font-size-fluid-1);
+        a {
+            font-size: var(--font-size-fluid-1);
+        }
     }
-  }
 </style>
