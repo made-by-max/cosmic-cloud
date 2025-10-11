@@ -26,6 +26,7 @@ const notes = defineCollection({
 const playground = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/data/playground" }),
   schema: z.object({
+    title: z.string(),
     date: z.date(),
     tags: z.array(z.string()),
   }),

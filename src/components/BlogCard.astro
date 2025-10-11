@@ -2,12 +2,12 @@
 import type { CollectionEntry } from "astro:content";
 import { fade } from "astro:transitions";
 
-interface Props {
-    post: CollectionEntry<"blog">;
-}
+// interface Props {
+//     post: CollectionEntry<"blog">;
+// }
 
 const { post } = Astro.props;
-const cta = { text: "Read more", href: `/blog/${post.id}` };
+const cta = { text: "Read more", href: `/${post.collection}/${post.id}` };
 ---
 
 <div class="post-card">
