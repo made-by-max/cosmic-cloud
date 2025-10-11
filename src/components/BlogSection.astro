@@ -3,14 +3,18 @@ import { getCollection } from "astro:content";
 import Section from "./Section.astro";
 import BlogCard from "./BlogCard.astro";
 
-const posts = await getCollection("blog");
-posts.sort((a, b) => {
+const blogPosts = await getCollection("blog");
+const notes = await getCollection("notes");
+const playground = await getCollection("playground");
+const allPosts = [...blogPosts, ...notes, ...playground];
+
+allPosts.sort((a, b) => {
     const dateA = new Date(a.data.date);
     const dateB = new Date(b.data.date);
     return dateB.getTime() - dateA.getTime();
 });
 
-const suggestedEntries = posts.slice(0, 3);
+const suggestedEntries = allPosts.slice(0, 3);
 
 const heading = "Latest posts";
 const cta = { text: "All posts", href: "/blog" };
