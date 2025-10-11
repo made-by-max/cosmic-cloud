@@ -6,7 +6,11 @@ import type { CollectionEntry } from "astro:content";
 import Wrapper from "../../components/Wrapper.astro";
 
 export async function getStaticPaths() {
-    const allPosts = await getCollection("blog");
+    const blogPosts = await getCollection("blog");
+    const notes = await getCollection("notes");
+    const playground = await getCollection("playground");
+    const allPosts = [...blogPosts, ...notes, ...playground];
+
     const uniqueTags = [
         ...new Set(allPosts.map((post) => post.data.tags).flat()),
     ];
