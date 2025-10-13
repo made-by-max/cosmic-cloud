@@ -8,7 +8,6 @@ const blog = defineCollection({
     description: z.string().max(400),
     date: z.date(),
     tags: z.array(z.string()),
-    type: z.string(),
   }),
 });
 
@@ -16,10 +15,8 @@ const notes = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/data/notes" }),
   schema: z.object({
     title: z.string(),
-    description: z.string().max(400),
     date: z.date(),
     tags: z.array(z.string()),
-    type: z.string(),
   }),
 });
 
@@ -29,6 +26,7 @@ const playground = defineCollection({
     title: z.string(),
     date: z.date(),
     tags: z.array(z.string()),
+    image: z.string().optional(),
   }),
 });
 

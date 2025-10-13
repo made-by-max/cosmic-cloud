@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import BlogCard from "../components/BlogCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TagCloud from "../components/TagCloud.astro";
+import PostSubNav from "../components/PostSubNav.astro";
+
+const blogPosts = await getCollection("blog");
+const notes = await getCollection("notes");
+const playground = await getCollection("playground");
+const allPosts = [...blogPosts, ...notes, ...playground];
+
+allPosts.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
+});
+
+const heading = "All Posts";
+const pageTitle = "All Posts";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h1>{heading}</h1>
+    <div class="container">
+        <PostSubNav />
+
+        <div class="post-list">
+            {allPosts.map((post) => <BlogCard post={post} />)}
+        </div>
+
+        <aside>
+            <TagCloud />
+        </aside>
+    </div>
+</BaseLayout>
+
+<style>
+    .container {
+        display: grid;
+        gap: var(--size-fluid-3);
+        grid-template-columns: 1fr minmax(250px, 300px);
+    }
+
+    .post-list {
+        grid-column: 1;
+        @media (max-width: 50rem) {
+            grid-column: 1/-1;
+        }
+    }
+    aside {
+        grid-column: 2;
+
+        @media (max-width: 50rem) {
+            display: none;
+        }
+    }
+</style>

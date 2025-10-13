@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import BlogCard from "../components/BlogCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TagCloud from "../components/TagCloud.astro";
+
+const posts = await getCollection("blog");
+posts.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
+});
+
+const heading = "Blog Posts";
+const pageTitle = "Blog Posts";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h1>{heading}</h1>
+    <div class="container">
+        <div class="post-list">
+            {posts.map((post) => <BlogCard post={post} />)}
+        </div>
+
+        <aside>
+            <TagCloud />
+        </aside>
+    </div>
+</BaseLayout>
+
+<style>
+    .container {
+        display: grid;
+        gap: var(--size-fluid-3);
+        grid-template-columns: 1fr minmax(250px, 300px);
+    }
+
+    .post-list {
+        grid-column: 1;
+        @media (max-width: 50rem) {
+            grid-column: 1/-1;
+        }
+    }
+    aside {
+        grid-column: 2;
+
+        @media (max-width: 50rem) {
+            display: none;
+        }
+    }
+</style>
