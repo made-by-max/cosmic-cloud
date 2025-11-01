@@ -36,6 +36,43 @@ content:
         type: image
         list: true
 
+  - name: notes
+    label: Notes
+    path: src/data/notes
+    filename: '{year}-{month}-{day}-{fields.title}.md'
+    type: collection
+    view:
+      fields: [ title, date, "tags[0]" ]
+      primary: title
+      default:
+        sort: date
+  
+    fields:
+      - name: title
+        label: Title
+        type: string
+
+    
+      - name: date
+        label: Publication Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+
+      - name: body
+        label: Body
+        type: rich-text
+
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+
+      - name: images
+        label: Images
+        type: image
+        list: true
+
   - name: site-settings
     label: Site Settings
     path: src/config/site.json
