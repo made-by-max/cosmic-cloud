@@ -1,7 +1,7 @@
 content:
   - name: blog
     label: Writing
-    path: src/data/writing
+    path: src/data/blog
     filename: '{year}-{month}-{day}-{fields.title}.md'
     type: collection
     view:
@@ -16,16 +16,6 @@ content:
         type: string
 
     
-      - name: type
-        label: Type
-        type: string
-
-      - name: description
-        label: Description
-        type: text
-        options:
-          maxlength: 300
-
       - name: date
         label: Publication Date
         type: date
