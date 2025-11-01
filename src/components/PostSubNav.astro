@@ -1,5 +1,6 @@
 <div class="subnav">
-    <a href="/blog">Blog Posts</a>
+    <a href="/posts">All Posts</a>
+    <a href="/blog">Blog</a>
     <a href="/notes">Notes</a>
     <a href="/playground">Playground</a>
 </div>
@@ -8,13 +9,14 @@
     .subnav {
         display: flex;
         align-items: center;
-        padding: 1rem;
+        gap: var(--size-3);
+        margin-block-start: var(--size-3);
     }
 
     .subnav a {
         text-decoration: none;
+        font-size: var(--font-size-0);
 
-        margin-inline-start: var(--size-5);
-        font-size: var(--font-size-fluid-0);
+        color: var(--text-secondary);
     }
 </style>

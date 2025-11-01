@@ -4,31 +4,27 @@ import { ClientRouter } from "astro:transitions";
 
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import "@fontsource-variable/instrument-sans";
 const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_today,sell"
-    />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <meta name="generator" content={Astro.generator} />
-    <ClientRouter />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Navigation />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-  </body>
+        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="generator" content={Astro.generator} />
+        <ClientRouter />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <Navigation />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
 </html>
-<script src="https://kit.fontawesome.com/4af88aed54.js" crossorigin="anonymous"
-></script>

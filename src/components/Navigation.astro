@@ -1,11 +1,13 @@
 ---
-import madebymax from "../assets/madebymax.svg"; // Correct import path
+import logo from "../assets/logo.svg"; // Correct import path
 import { Image } from "astro:assets";
 ---
 
 <nav>
     <div>
-        <a href="/"> <Image src={madebymax} alt="Home" height="32" /> </a>
+        <a href="/" class="HomeLink">
+            <Image src={logo} alt="Home" height="20" />Max Taylor</a
+        >
     </div>
     <div class="pageLinks">
         <a href="/posts/">All Posts</a>
@@ -18,7 +20,7 @@ import { Image } from "astro:assets";
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            margin-block-end: var(--size-8);
+            margin-block: var(--size-8);
 
             max-width: var(--max-width);
             padding-inline: var(--size-fluid-3);
@@ -33,12 +35,18 @@ import { Image } from "astro:assets";
             text-decoration: none;
             color: var(--text-1);
             margin-inline-start: var(--size-5);
-            font-size: var(--font-size-fluid-0);
+            font-size: var(--font-size-2);
+        }
+
+        .HomeLink {
+            display: flex;
+            gap: var(--size-3);
+            align-items: center;
         }
 
         nav a:hover,
         a:focus {
-            color: var(--brand);
+            color: var(--brand-primary);
         }
 
         .pageLinks {
