@@ -2,11 +2,9 @@
 title: Shadcn combobox
 date: 2025-09-24
 tags:
-  - notes
   - today-i-made
   - demo
   - react
-image: /media/demo.gif
 ---
 I was really hoping to finish up [Scrimba's Advanced React Course](https://scrimba.com/advanced-react-c02h) today (I'm soooo close), but I ended up building [a little demo](https://timely-buttercream-545448.netlify.app/) instead.
 

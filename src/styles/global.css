@@ -314,6 +314,7 @@
         color: var(--text-secondary);
         /* margin-inline: var(--size-1); */
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: var(--size-1);
     }

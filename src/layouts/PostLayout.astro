@@ -1,12 +1,12 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
-const posts = await getCollection("writing");
-posts.sort((a, b) => {
-    const dateA = new Date(a.data.date);
-    const dateB = new Date(b.data.date);
-    return dateB.getTime() - dateA.getTime();
-});
+// const posts = await getCollection("writing");
+// posts.sort((a, b) => {
+//     const dateA = new Date(a.data.date);
+//     const dateB = new Date(b.data.date);
+//     return dateB.getTime() - dateA.getTime();
+// });
 
 const { post } = Astro.props;
 const { Content } = await render(post);
@@ -59,3 +59,4 @@ const pageTitle = post.data.title;
         </div>
     </div>
 </BaseLayout>
+

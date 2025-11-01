@@ -1,10 +1,7 @@
 ---
 title: CSS Architecture with Beyond CSS
-description: Diving into the deep end of CSS
 date: 2024-08-19
-type: Article
 tags:
-  - blog
   - css
   - learning
 ---
