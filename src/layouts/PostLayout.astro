@@ -3,9 +3,9 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 const posts = await getCollection("writing");
 posts.sort((a, b) => {
-  const dateA = new Date(a.data.date);
-  const dateB = new Date(b.data.date);
-  return dateB.getTime() - dateA.getTime();
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
 });
 
 const { post } = Astro.props;
@@ -14,33 +14,48 @@ const pageTitle = post.data.title;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div>
-    <div class="post-header">
-      <p class="post-type">{post.data.type}</p>
-      <h1 class="post-heading">
-        {post.data.title}
-      </h1>
+    <div>
+        <div class="post-header">
+            <div class="post-type">
+                <a href=`/${post.collection}`>
+                    {post.collection}
+                </a>
+            </div>
+            <h1 class="post-heading">
+                {post.data.title}
+            </h1>
 
-      <div class="post-metadata">
-        <div class="post-date">
-          <span class="material-symbols-outlined"> calendar_today </span>
-          {post.data.date.toLocaleDateString()}
+            <div class="post-metadata">
+                <div class="post-date">
+                    <svg class="i i-calendar" viewBox="0 0 24 24">
+                        <rect width="18" height="17" x="3" y="5" rx="2"></rect>
+                        <path d="M7 2v3m10-3v3M3 10h18"></path>
+                    </svg>
+                    {post.data.date.toLocaleDateString()}
+                </div>
+
+                <div class="post-tags">
+                    <svg class="i i-tag" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2H2v10l8.5 8.5q1.5 1.4 3 0l7-7q1.4-1.5 0-3ZM7 7h0"
+                        ></path>
+                    </svg>
+                    {
+                        post.data.tags.map((tag) => (
+                            <a href={`/tags/${tag}`}>{tag}</a>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
+        <div class="post-container">
+            <article>
+                <Content />
+            </article>
 
-        <div class="post-tags">
-          <span class="material-symbols-outlined"> sell </span>
-          {post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
-        </div>
-      </div>
-    </div>
-    <div class="post-container">
-      <article>
-        <Content />
-      </article>
-
-      <!-- <aside>
+            <!-- <aside>
         <h4>Table of Contents</h4>
       </aside> -->
+        </div>
     </div>
-  </div>
 </BaseLayout>

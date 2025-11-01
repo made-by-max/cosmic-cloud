@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.7"
+    "@fontsource-variable/instrument-sans": "^5.2.8",
+    "astro": "^5.13.7",
+    "meteor-icons": "^3.7.0"
   }
 }

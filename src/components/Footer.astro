@@ -3,106 +3,128 @@ import EmailLink from "./EmailLink.astro";
 ---
 
 <footer>
-  <hr />
-  <div class="footer-content">
-    <div>
-      <p class="footer-cta">Like what you see? Get in touch!</p>
-      <p class="email">hi@madebymax.dev</p>
-    </div>
+    <hr />
+    <div class="footer-content">
+        <div>
+            <p class="footer-cta">Like what you see? Get in touch!</p>
+            <p class="email">hi@madebymax.dev</p>
+        </div>
 
-    <div class="footer-bottom">
-      <div class="copyright">
-        <p>&copy; 2025 Max Taylor. All rights reserved.</p>
-      </div>
-      <div class="social-links">
-        <ul>
-          <li>
-            <a href="https://bsky.app/profile/madebymax.bsky.social"
-              ><i class="fa-brands fa-bluesky"></i> Bluesky</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/made-by-max"
-              ><i class="fa-brands fa-github"></i> Github</a
-            >
-          </li>
-          <li>
-            <a href="https://codepen.io/made-by-max"
-              ><i class="fa-brands fa-codepen"></i> Codepen</a
-            >
-          </li>
-          <!-- <li>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <ul>
+                    <li>
+                        <a
+                            href="https://bsky.app/profile/madebymax.bsky.social"
+                        >
+                            <svg class="i i-bluesky" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 10Q2-2 2 6t5 8q-5 3-1 6t6-3q2 6 6 3t-1-6q5 0 5-8t-10 4"
+                                ></path>
+                            </svg>
+                            Bluesky</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/made-by-max">
+                            <svg class="i i-github" viewBox="0 0 24 24">
+                                <path
+                                    d="M9 22v-3q0-2 1-3A7 6.5 0 0 1 5 5Q4 3 5 1q3 0 4 2 3.5-1 7 0 1-2 4-2 1 2 0 4a7 6.5 0 0 1-5 11q1 1 1 3v3m-7-3c-4 1-4-2-7-3"
+                                ></path>
+                            </svg>
+
+                            Github</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://codepen.io/made-by-max">
+                            <svg class="i i-codepen" viewBox="0 0 24 24">
+                                <path
+                                    d="m12 2 10 6.5v7L12 22 2 15.5v-7Zm0 20v-6.5M12 2v6.5"
+                                ></path>
+                                <path d="m22 8.5-10 7-10-7"></path>
+                                <path d="m2 15.5 10-7 10 7"></path>
+                            </svg>
+
+                            Codepen</a
+                        >
+                    </li>
+                    <!-- <li>
         <a href="https://www.linkedin.com/in/madebymax/"
           ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
         >
       </li> -->
-        </ul>
-      </div>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Max Taylor. All rights reserved.</p>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
 
 <style>
-  footer {
-  }
-
-  .footer-content {
-    max-width: var(--max-width);
-    padding-inline: var(--size-fluid-3);
-    margin-inline: auto;
-
-    @media (width < 500px) {
-      padding: 1rem;
+    footer {
     }
-  }
 
-  hr {
-    margin-block: 8rem;
-    margin-bottom: 8rem;
-    max-width: 80rem;
-    margin-inline: auto;
-    height: 1px;
-    background: -webkit-linear-gradient(-27deg, #303af5, #6168f7);
-    border: none;
-  }
+    .footer-content {
+        max-width: var(--max-width);
+        padding-inline: var(--size-fluid-3);
+        margin-inline: auto;
 
-  .footer-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-block-start: 80px;
-  }
-
-  .copyright p {
-    font-size: var(--font-size-fluid--1);
-    color: var(--text-2);
-  }
-
-  .social-links ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    flex-wrap: wrap;
-
-    a {
-      margin-inline-start: var(--size-5);
-      color: var(--text-1);
-      font-size: var(--font-size-fluid-0);
-      text-decoration: none;
+        @media (width < 500px) {
+            padding: 1rem;
+        }
     }
-    a:hover,
-    a:focus {
-      color: var(--brand);
+
+    hr {
+        margin-block-start: var(--size-12);
+        margin-block-end: var(--size-9);
+        max-width: 80rem;
+        margin-inline: auto;
+        height: 1px;
+        background: var(--border);
+        border: none;
     }
-  }
 
-  .footer-cta {
-    font-size: var(--font-size-fluid-2);
-  }
+    .footer-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-block: var(--size-10);
+    }
 
-  .email {
-    font-size: var(--font-size-fluid-3);
-  }
+    .copyright p {
+        font-size: var(--font-size-0);
+        color: var(--text-secondary);
+    }
+
+    .social-links ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        flex-wrap: wrap;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: var(--text-1);
+            margin-inline-end: var(--size-5);
+            font-size: var(--font-size-2);
+        }
+        a:hover,
+        a:focus {
+            color: var(--brand-primary);
+        }
+    }
+
+    .footer-cta {
+        font-size: var(--font-size-2);
+    }
+
+    .email {
+        font-size: var(--font-size-3);
+    }
 </style>
