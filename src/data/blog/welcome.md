@@ -1,10 +1,10 @@
 ---
 title: Welcome! Everything is fine.
-description: What this blog is all about
+
 date: 2024-06-15
-type: Article
+
 tags:
-  - blog
+
   - design engineering
   - learning
 ---

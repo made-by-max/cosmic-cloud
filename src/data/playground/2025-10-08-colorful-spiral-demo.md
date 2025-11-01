@@ -1,7 +1,6 @@
 ---
 title: Colorful spiral demo
 type: Playground
-description: cool spiral
 date: 2025-10-07
 tags:
   - animations

@@ -1,10 +1,9 @@
 ---
 title: Our Language Reflects Our Values
 date: 2021-03-29
-description: Words matter.
-type: Article
-tags: 
-- blog
+
+tags:
+
 - product design
 - inclusive design
 ---
