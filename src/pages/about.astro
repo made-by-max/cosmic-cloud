@@ -8,53 +8,50 @@ const pageTitle = title;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <Section>
-        <div class="head">
-            <div>
-                <img
-                    class="profile"
-                    src="../media/profilepic.png"
-                    alt="A headshot of Max, a white person with short brown hair and glasses."
-                />
-            </div>
-            <div class="intro-content">
-                <h1 class="headline">👋 Hey there, I'm Max!</h1>
-                <div class="content">
-                    <p class="subhead">
-                        I work hard so my dog can have a better life.
-                    </p>
-                </div>
+    <div class="head">
+        <img
+            class="profile"
+            src="../media/profilepic.png"
+            alt="A headshot of Max, a white person with short brown hair and glasses."
+        />
+
+        <div class="intro-content">
+            <h1 class="headline">👋 Hey there, I'm Max!</h1>
+            <div class="content">
+                <p class="subhead">
+                    I work hard so my dog can have a better life.
+                </p>
             </div>
         </div>
+    </div>
 
-        <p>
-            I'm a product designer, former librarian, and (hopefully) future
-            design engineer.
-        </p>
+    <p>
+        I'm a product designer, former librarian, and (hopefully) future design
+        engineer.
+    </p>
 
-        <p>
-            I started my career as a librarian (which means I'm awesome at
-            information architecture) before making a career pivot and getting
-            into UX about 9 years ago. Lately I've been thinking about making
-            another (smaller) career change and getting into design engineering.
-            I'm currently teaching myself React and a couple of animation
-            libraries, while also brushing up on my CSS and JavaScript. I'll
-            probably throw a little express.js and node.js in the mix to cover a
-            bit of the backend as well.
-        </p>
+    <p>
+        I started my career as a librarian (which means I'm awesome at
+        information architecture) before making a career pivot and getting into
+        UX about 9 years ago. Lately I've been thinking about making another
+        (smaller) career change and getting into design engineering. I'm
+        currently teaching myself React and a couple of animation libraries,
+        while also brushing up on my CSS and JavaScript. I'll probably throw a
+        little express.js and node.js in the mix to cover a bit of the backend
+        as well.
+    </p>
 
-        <p>
-            As a product designer, my specialties are informatin architecture,
-            systems thinking, accessibility and inclusive design. I spent 7
-            years working on developer tools and I'm currently working in the
-            healthcare space.
-        </p>
+    <p>
+        As a product designer, my specialties are informatin architecture,
+        systems thinking, accessibility and inclusive design. I spent 7 years
+        working on developer tools and I'm currently working in the healthcare
+        space.
+    </p>
 
-        <p>
-            Outside of work I enjoy powerlifting, reading, hiking, and hanging
-            out with my faithful canine companion, Rufus.
-        </p>
-    </Section>
+    <p>
+        Outside of work I enjoy powerlifting, reading, hiking, and hanging out
+        with my faithful canine companion, Rufus.
+    </p>
 </BaseLayout>
 
 <style>
@@ -63,7 +60,7 @@ const pageTitle = title;
         flex-direction: row-reverse;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: start;
     }
 
     img.profile {
