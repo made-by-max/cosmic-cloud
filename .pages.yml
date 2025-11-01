@@ -1,6 +1,6 @@
 content:
   - name: blog
-    label: Writing
+    label: Blog
     path: src/data/blog
     filename: '{year}-{month}-{day}-{fields.title}.md'
     type: collection
