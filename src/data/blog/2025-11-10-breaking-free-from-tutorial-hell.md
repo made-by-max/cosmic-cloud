@@ -3,6 +3,7 @@ title: Breaking free from tutorial hell
 date: 2025-11-10
 tags:
   - projects
+  - tailsforce
 ---
 I've probably spent far too long in tutorial hell. I love taking new courses and I'm the kind of person who wants to understand how all the pieces fit together before I start in on something. So I just keep learning about new technologies and not actually building anything. It's a problem, I know.
 
