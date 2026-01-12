@@ -6,11 +6,11 @@ tags:
 ---
 ## Week of Jan 5
 
-**One good thing that happened this week**
+### One good thing that happened this week
 
 I went a little off the rails with the holiday eating this year, but I’ve been getting back into the swing of things and my pants are starting to be comfortable again.
 
-**Best things I’ve read/watched/consumed this week**
+### Best things I’ve read/watched/consumed this week
 
 [Why RSS matters](https://werd.io/why-rss-matters/)
 
@@ -24,6 +24,6 @@ This was more about developers moving out of development, which is the opposite 
 
 Like Connections on steroids. This game is completely addictive. I've been slowly chipping away at it throughout the week.
 
-**What I’ve been learning this week**
+### What I’ve been learning/doing this week
 
 After finishing The Joy of React I haven’t really settled on what to do next, plus work and life both got kinda busy, so I didn’t do as much I’d hoped this week. I played with Motion a bit and messed around with a couple of personal projects, but that’s about it.
