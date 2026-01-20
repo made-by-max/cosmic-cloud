@@ -1,5 +1,5 @@
 ---
-title: "The Changelog: Week of January 5"
+title: "Status Update: Week of January 5, 2026"
 date: 2026-01-09
 tags:
   - life
